@@ -29,3 +29,22 @@ it("works when you click on the right arrow", function() {
     container.querySelector('img[alt="testing image 2"]')
   ).toBeInTheDocument();
 });
+
+it("renders without crashing", function () {
+  render(
+        <Carousel
+          photos={["test"]}
+          title={"test"}
+        />
+  )
+});
+
+it("snapshot tests for stability", function () {
+    const { container } = render(
+        <Carousel
+            photos={TEST_IMAGES}
+            title="images for testing"
+        />
+        );
+    expect(container).toMatchSnapshot();
+})
