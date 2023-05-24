@@ -32,6 +32,7 @@ import Card from "./Card";
 
   const isLeftHidden = currCardIdx === 0 ? "leftHidden" : "";
   const isRightHidden = currCardIdx === total - 1 ? "rightHidden" : "";
+
   return (
     <div className="Carousel">
       <h1>{title}</h1>
